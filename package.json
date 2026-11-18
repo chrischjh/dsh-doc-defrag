@@ -1,0 +1,54 @@
+{
+  "name": "dsh-doc-defrag",
+  "version": "0.2.0",
+  "description": "把碎片化的 Markdown 文档收束成少数权威文档，其余归档（可逆、零删除）。",
+  "type": "module",
+  "license": "MIT",
+  "keywords": [
+    "dsh-plugin",
+    "documentation",
+    "docs",
+    "markdown",
+    "consolidation",
+    "archive"
+  ],
+  "exports": {
+    ".": "./index.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./skill/*": "./skills/doc-defrag/*"
+  },
+  "files": [
+    "index.js",
+    "cordis.patch.yml",
+    "skills/doc-defrag/SKILL.md",
+    "skills/doc-defrag/references/*.md",
+    "skills/doc-defrag/scripts/*.mjs",
+    "locale/en.json",
+    "locale/zh.json",
+    "icon.svg",
+    "README.md",
+    "DESIGN.md",
+    "CHANGELOG.md"
+  ],
+  "dsh": {
+    "engines": {
+      "dsh": ">=0.2.0-rc.2 <0.3.0"
+    },
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "author": "Chris Chen <chrischjh@icloud.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chrischjh/dsh-doc-defrag.git"
+  },
+  "homepage": "https://github.com/chrischjh/dsh-doc-defrag#readme",
+  "bugs": {
+    "url": "https://github.com/chrischjh/dsh-doc-defrag/issues"
+  },
+  "scripts": {
+    "test": "node --test skills/doc-defrag/scripts/defrag.test.mjs"
+  }
+}

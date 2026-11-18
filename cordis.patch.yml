@@ -1,0 +1,4 @@
+- insert:
+    - id: dsh-doc-defrag
+      name: dsh-doc-defrag
+      config: {}
