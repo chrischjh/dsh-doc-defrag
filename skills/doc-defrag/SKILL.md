@@ -214,7 +214,7 @@ node <skill>/scripts/defrag.mjs review --root docs --run <runId>          # 取�
 |---|---|
 | 「先把过时的收起来」 | 只做判过时 + `archive` + 索引，**不写新文档、不改正文** |
 | 「评估一下有多乱」 | 只跑 `scan` + `links`，零改动 |
-| 「我要 A/B/C 三份」 | 直接用清单（`docset init`），记住下次沿用 |
+| 「我要 A/B/C 三份」 | 停下 → 回显覆盖分析 → 按新清单重整；立即落盘记住，下次沿用 |
 | 「改一下清单」 | `docset set --if-revision <revision>`，或让用户手改后 `verify` |
 | 「恢复上一版清单」 | 从 `.defrag/history/` 取最近快照写回（revision +1，不改历史） |
 | 「我后悔了」「恢复原状」 | `undo --run <runId> --apply`；报 `mismatches`，0 即逐字节还原 |
