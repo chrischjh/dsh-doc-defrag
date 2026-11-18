@@ -1,6 +1,6 @@
 {
   "name": "dsh-doc-defrag",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "把碎片化的 Markdown 文档收束成少数权威文档，其余归档（可逆、零删除）。",
   "type": "module",
   "license": "MIT",

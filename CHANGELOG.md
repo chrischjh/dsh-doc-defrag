@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 0.2.2 — 2026-11-18
+
+- README 去掉指向 DESIGN.md 的链接（设计文档不随包发布）
 ## 0.2.1 — 2026-11-18
 
 - README 默认英文（`README.md`），中文移至 `README.zh-CN.md`，顶部互相切换

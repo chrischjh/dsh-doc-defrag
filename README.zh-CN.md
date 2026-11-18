@@ -39,6 +39,9 @@ English | [中文](README.zh-CN.md)
 - 只处理 Markdown（`.md`），别的格式不动
 - 默认只读、先给方案；**你不点头它不改任何文件**
 
----
+## 安装
 
-完整设计见 [DESIGN.md](DESIGN.md)。
+```bash
+dsh plugin add dsh-doc-defrag                        # npm
+dsh plugin add github:chrischjh/dsh-doc-defrag       # GitHub
+```

@@ -42,10 +42,7 @@ You: help me tidy up the project docs
 ## Install
 
 ```bash
-dsh plugin add github:chrischjh/dsh-doc-defrag
-dsh plugin add dsh-doc-defrag          # npm (after publish)
+dsh plugin add dsh-doc-defrag                        # npm
+dsh plugin add github:chrischjh/dsh-doc-defrag       # GitHub
 ```
 
----
-
-Full design in [DESIGN.md](DESIGN.md) (Chinese).
