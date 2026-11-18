@@ -1,44 +1,51 @@
 # doc-defrag
 
-[English](README_EN.md) | 中文
+[中文](README.zh-CN.md) | English
 
-> AI 每天都在写文档。越积越多，**有效的和过时的混在一起**，你想清理，却不知道该从哪下手——**这个工具专治这个。**
+> AI writes documents every day. They pile up — **the current ones mixed with the stale ones** — and you want to clean up but don't know where to start. **This tool is built for exactly that.**
 
-你大概认得出这些瞬间：
+Moments you probably recognize:
 
-- 上周的报告和三个月前的方案讲的是同一件事，你**不知道哪份能信**
-- **不敢删**：删错一次的代价，比留着一堆垃圾大得多
-- 让 AI「整理一下文档」，它转头又给你新建了五份《整理报告》
-- 新同事、新 agent 的第一句话永远是：**我该看哪个？**
+- Last week's report and a three-month-old proposal describe the same thing, and you **don't know which one to trust**
+- You **dare not delete**: the cost of deleting something important is far higher than keeping a pile of junk
+- Ask the AI to "tidy up the docs" and it creates five more `SUMMARY.md` files
+- A new teammate's (or a new agent's) first question is always: **which document do I read?**
 
-这不是你不会整理。是碎片产生的速度**结构性超过**了任何人手工整理的速度——而且过时文档会被 agent 当成事实读进去，它不是占地方，是**每轮都在放毒**。
+This isn't a discipline problem. Fragmentation is produced faster than anyone can clean it up — and stale documents get read as ground truth by agents. They don't just take up space; **they poison every run**.
 
-## 它做什么
+## What it does
 
-一句话：**读一遍你的文档 → 猜出项目类型 → 给你几份默认清单让你选 → 把有效内容收束进那几份 → 其余归档（原件保留、带索引）→ 给你复核报告。**
+In one sentence: **reads your docs → guesses the project type → gives you a default document set to choose → consolidates the valuable content into those few files → archives the rest (originals kept, indexed) → hands you a review card.**
 
-**归档不是作废**：`archive/index.md` 告诉你每个文件为什么在这、内容抽进了哪份新文档，随时可回查。
+**Archived ≠ dead**: `archive/index.md` tells you why each file is there and which new document absorbed its content. Everything stays retrievable.
 
-## 用法
+## Usage
 
-**只需要一句话：**
+**One sentence is all you need:**
 
 ```
-你：帮我整理一下项目文档
+You: help me tidy up the project docs
 ```
 
-## 为什么不会丢东西
+## Why nothing gets lost
 
-| 保障 | 落地形式 |
+| Guarantee | How |
 |---|---|
-| **永不删除** | 只移动。原件逐字节进 `archive/`，保留原相对路径 |
-| **全程可回滚** | 动文件前先拍快照、记日志；一键恢复原状，不依赖 git |
+| **Never deletes** | Moves only. Originals go into `archive/` byte-for-byte, with their original relative paths |
+| **Always reversible** | Snapshot + journal before touching any file; one-click restore that doesn't require git |
 
-## 边界
+## Boundaries
 
-- 只处理 Markdown（`.md`），别的格式不动
-- 默认只读、先给方案；**你不点头它不改任何文件**
+- Markdown (`.md`) only; other formats are left alone
+- Read-only by default; **it changes nothing until you approve**
+
+## Install
+
+```bash
+dsh plugin add github:chrischjh/dsh-doc-defrag
+dsh plugin add dsh-doc-defrag          # npm (after publish)
+```
 
 ---
 
-完整设计见 [DESIGN.md](DESIGN.md)。
+Full design in [DESIGN.md](DESIGN.md) (Chinese).

@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 0.2.1 — 2026-11-18
+
+- README 默认英文（`README.md`），中文移至 `README.zh-CN.md`，顶部互相切换
+- npm 包内同时携带双语 README
 ## 0.2.0 — 2026-11-17
 
 **可后悔（不依赖 git）**
