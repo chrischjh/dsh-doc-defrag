@@ -28,7 +28,6 @@
     "locale/zh.json",
     "icon.svg",
     "README.md",
-    "DESIGN.md",
     "CHANGELOG.md"
   ],
   "dsh": {
